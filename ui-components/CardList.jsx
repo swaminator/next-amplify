@@ -2,13 +2,12 @@
 //     Image
 //   } from '@aws-amplify/ui-react';
   import Image from 'next/image'
-  import { categories } from './gallery-info';
   import {Storage} from 'aws-amplify'; 
   import { useEffect, useState } from 'react';
 
   const listFiles = async () => {
     const files = await Storage.list('photos/') // for listing ALL files without prefix, pass '' instead
-    let signedFiles = files.results.map(f => Storage.get(f.key, {contentType: "image/png"}))
+    let signedFiles = files.results.map(f => Storage.get(f.key))
     signedFiles = await Promise.all(signedFiles)
     console.log('signedFiles: ', signedFiles)
     return signedFiles

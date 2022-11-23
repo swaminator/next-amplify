@@ -1,0 +1,15 @@
+projects:
+  createnextapp:
+    schemaPath: amplify/backend/api/createnextapp/build/schema.graphql
+    includes:
+      - src/graphql/**/*.js
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: javascript
+        generatedFileName: ''
+        docsFilePath: src/graphql
+        region: ca-central-1
+        apiId: null
+        maxDepth: 2

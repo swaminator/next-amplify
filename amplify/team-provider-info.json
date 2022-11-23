@@ -14,6 +14,9 @@
     "categories": {
       "auth": {
         "createnextapp": {}
+      },
+      "storage": {
+        "s3adamdemoe4cd5d5b": {}
       }
     }
   }

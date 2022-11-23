@@ -35,8 +35,7 @@
         {
           data && data.map((file, i) => (
             i!=0 && <Image
-              // id={i}
-              loader={ () => file}
+              // loader={ () => file}
               src={file}
               width = {500}
               height= {300}
